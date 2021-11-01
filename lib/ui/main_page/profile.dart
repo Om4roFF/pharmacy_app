@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:melissa_pharm/ui/_scaffold_bars/bars.dart';
-import 'package:melissa_pharm/ui/secondary_pages/profile/bank_cards.dart';
-import 'package:melissa_pharm/ui/secondary_pages/profile/my_addresses.dart';
-import 'package:melissa_pharm/ui/secondary_pages/profile/orders.dart';
-import 'package:melissa_pharm/ui/secondary_pages/profile/personal_info.dart';
 
 class ProfilePage extends StatelessWidget {
   @override

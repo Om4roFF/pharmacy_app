@@ -3,7 +3,7 @@ part of 'bars.dart';
 @immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  const CustomAppBar({required Key key, this.title = 'false'})
+  const CustomAppBar({Key? key, this.title = 'false'})
       : super(key: key);
 
   @override
