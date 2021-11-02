@@ -5,42 +5,40 @@ class DrawerCustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double topAppPadding =
-        MediaQuery.of(context).padding.top + kToolbarHeight + 1;
     return Drawer(
       child: Column(children: [
         SizedBox(
-            height: 150,
-            child: Center(
-                child: Image.asset(
-              'assets/logo.png',
+          height: 120,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Image.asset(
+              'assets/logo_min.png',
               scale: 4,
-            ))),
+            ),
+          ),
+        ),
         StyledTile(
           icon: Icons.category_outlined,
           text: 'Каталог',
           onTap: () {
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => Catalog()));
+                .push(MaterialPageRoute(builder: (context) => const Catalog()));
           },
-          image: '',
           endText: '',
         ),
         StyledTile(
           icon: Icons.person_outline_sharp,
           text: 'Профиль',
           onTap: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => ProfilePage()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const ProfilePage()));
           },
-          image: '',
           endText: '',
         ),
         const StyledTile(
           icon: Icons.disc_full_outlined,
           text: 'Скидки',
           onTap: null,
-          image: '',
           endText: '',
         ),
         const StyledTile(
@@ -48,25 +46,21 @@ class DrawerCustom extends StatelessWidget {
           text: 'Аптеки',
           onTap: null,
           endText: '',
-          image: '',
         ),
         const StyledTile(
           icon: Icons.headset_mic_outlined,
           text: 'Служба поддержки',
-          image: '',
-          endText: '',
+          endText: '', onTap: null,
         ),
         const StyledTile(
           icon: Icons.mail_outline_outlined,
           text: 'Контакты',
-          image: '',
           endText: '',
         ),
         const StyledTile(
           icon: Icons.assignment_outlined,
           text: 'Конфидициальность',
           endText: '',
-          image: '',
         ),
       ]),
     );
@@ -75,23 +69,23 @@ class DrawerCustom extends StatelessWidget {
 
 class StyledTile extends StatelessWidget {
   final IconData icon;
-  final String image;
+  final String? image;
   final String text;
-  final String endText;
-  final onTap;
+  final String? endText;
+  final void Function()? onTap;
 
   const StyledTile(
       {Key? key,
       required this.icon,
       required this.text,
-      required this.image,
-      required this.endText,
+      this.image,
+      this.endText,
       this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Column(
         children: [
@@ -105,7 +99,7 @@ class StyledTile extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset(image),
+                    if (image != null) Image.asset(image!),
                     Icon(icon),
                     const SizedBox(
                       width: 13,
@@ -115,11 +109,7 @@ class StyledTile extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.only(right: 16),
-                  child: Row(
-                    children: [
-                      Text(endText),
-                    ],
-                  ),
+                  child: Text(endText ?? ''),
                 )
               ],
             ),

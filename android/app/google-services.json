@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "317829031712",
+    "project_id": "pharmacy-study-project",
+    "storage_bucket": "pharmacy-study-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317829031712:android:534edec6815c9f3cff5945",
+        "android_client_info": {
+          "package_name": "iitu.edu.pharmacy_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317829031712-v3sed4s0qkdkid6dn3a3hpkk7no2o7qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "iitu.edu.pharmacy_app",
+            "certificate_hash": "fc311ef8a82f0eb90735b8cf96b401549f784630"
+          }
+        },
+        {
+          "client_id": "317829031712-eq2ap9h86bjm6pf69atapj1hdpjl4j7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu3YNpkswRoRuj_9jkw8hPuuJa6_lYZBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317829031712-eq2ap9h86bjm6pf69atapj1hdpjl4j7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

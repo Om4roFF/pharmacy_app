@@ -4,10 +4,10 @@ import 'package:pharmacy_app/theme/styles.dart';
 class SocialLoginButton extends StatefulWidget {
   final String label;
   final Function onPressed;
-  final icon;
+  final String? iconPath;
 
   const SocialLoginButton(
-      {Key? key, required this.label, required this.onPressed, this.icon})
+      {Key? key, required this.label, required this.onPressed, this.iconPath})
       : super(key: key);
   @override
   _SocialLoginButtonState createState() => _SocialLoginButtonState();
@@ -61,7 +61,7 @@ class _SocialLoginButtonState extends State<SocialLoginButton> {
                   ? Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        if (widget.icon != null) Image.asset(widget.icon),
+                        if (widget.iconPath != null) Image.asset(widget.iconPath!),
                         SizedBox(
                             width: width * 0.5,
                             child: Text(

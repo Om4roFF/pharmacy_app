@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:melissa_pharm/ui/body_constructor.dart';
-import 'package:melissa_pharm/ui/widgets/buttons/outlined_green_button.dart';
+import 'package:pharmacy_app/ui/widgets/buttons/outlined_green_button.dart';
+
+import '../../body_constructor.dart';
 
 class MyCards extends StatelessWidget {
+  const MyCards({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Body(
@@ -12,16 +15,17 @@ class MyCards extends StatelessWidget {
           ListTile(
             leading: Checkbox(
               value: false,
+              onChanged: (bool? value) {},
             ),
             title: Row(
               children: [
                 Image.asset('assets/visa.png'),
-                Text('123456*****789')
+                const Text('123456*****789')
               ],
             ),
-            trailing: Icon(Icons.settings_applications_sharp),
+            trailing: const Icon(Icons.settings_applications_sharp),
           ),
-          OutlinedActionButton(label: 'Добавить карту', onPressed: (){})
+          OutlinedActionButton(label: 'Добавить карту', onPressed: () {})
         ],
       ),
     );

@@ -11,12 +11,12 @@ class CategoriesTabs extends StatelessWidget {
         DefaultTabController(
           length: 3,
           child: Column(
-            children: [
+            children: const [
               SizedBox(
                 height: 50,
                 child: CustomTabBar(),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(18.0),
                 child: SizedBox(
                   height: 200,
@@ -39,6 +39,8 @@ class CategoriesTabs extends StatelessWidget {
 }
 
 class CustomTabBar extends StatefulWidget {
+  const CustomTabBar({Key? key}) : super(key: key);
+
   @override
   _CustomTabBarState createState() => _CustomTabBarState();
 }

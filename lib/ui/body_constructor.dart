@@ -4,7 +4,7 @@ class Body extends StatelessWidget {
   final String title;
   final Widget child;
 
-  const Body({required Key key, required this.title, required this.child})
+  const Body({Key? key, required this.title, required this.child})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

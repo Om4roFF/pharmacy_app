@@ -38,13 +38,11 @@ class ProductContainer extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 18, vertical: 4),
-                      child: Container(
-                        child: Text(
-                          'Паста для шугаринга SugarLife Плотная, 200 г',
-                          softWrap: true,
-                          maxLines: 3,
-                          style: SugarLifeTheme.regular,
-                        ),
+                      child: Text(
+                        'Паста для шугаринга SugarLife Плотная, 200 г',
+                        softWrap: true,
+                        maxLines: 3,
+                        style: SugarLifeTheme.regular,
                       ),
                     ),
                   ],
@@ -74,7 +72,7 @@ class ProductContainer extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(
+            const Positioned(
               top: 8,
               left: 12,
               child: LikeButton(),
@@ -155,7 +153,7 @@ class BigSizeContainer extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(top: 8, left: 12, child: LikeButton()),
+            const Positioned(top: 8, left: 12, child: LikeButton()),
           ],
         ),
       ),

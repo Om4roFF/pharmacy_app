@@ -28,52 +28,50 @@ class CartItem extends StatelessWidget {
           decoration: decoration,
           child: Row(
             children: [
-              Container(
-                child: Flex(
-                  direction: Axis.horizontal,
-                  children: [
-                    Container(
-                      height: 90,
-                      width: 90,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'assets/product.png',
-                          ),
+              Flex(
+                direction: Axis.horizontal,
+                children: [
+                  Container(
+                    height: 90,
+                    width: 90,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/product.png',
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 150,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Фервекс Плотная, 200 г',
-                            softWrap: true,
-                            maxLines: 3,
-                            style:
-                                SugarLifeTheme.regular.copyWith(fontSize: 14),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '1 200 Т',
-                                style: SugarLifeTheme.regularBold,
-                              ),
-                              const Icon(Icons.arrow_forward),
-                            ],
-                          )
-                        ],
-                      ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width - 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Фервекс Плотная, 200 г',
+                          softWrap: true,
+                          maxLines: 3,
+                          style:
+                              SugarLifeTheme.regular.copyWith(fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '1 200 Т',
+                              style: SugarLifeTheme.regularBold,
+                            ),
+                            const Icon(Icons.arrow_forward),
+                          ],
+                        )
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

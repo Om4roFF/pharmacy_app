@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_app/ui/widgets/buttons/outlined_green_button.dart';
+
+import '../body_constructor.dart';
 
 class Catalog extends StatefulWidget {
+  const Catalog({Key? key}) : super(key: key);
+
   @override
   _CatalogState createState() => _CatalogState();
 }
@@ -17,27 +22,28 @@ class _CatalogState extends State<Catalog> {
             padding: const EdgeInsets.only(top: 16.0, bottom: 4.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 Text('По популяроности'),
                 Text('Фильтровать'),
               ],
             ),
           ),
-          Container(
-              width: w,
-              child: GridView.builder(
-                shrinkWrap: true,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    // crossAxisSpacing: 8,
-                    // mainAxisSpacing: 24,
-                    childAspectRatio: (w / 2 - 20) / 285,
-                    crossAxisCount: 2),
-                itemBuilder: (context, i) {
-                  return Product();
-                },
-                itemCount: 6,
-                physics: NeverScrollableScrollPhysics(),
-              ))
+          SizedBox(
+            width: w,
+            child: GridView.builder(
+              shrinkWrap: true,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  // crossAxisSpacing: 8,
+                  // mainAxisSpacing: 24,
+                  childAspectRatio: (w / 2 - 20) / 285,
+                  crossAxisCount: 2),
+              itemBuilder: (context, i) {
+                return const Product();
+              },
+              itemCount: 6,
+              physics: const NeverScrollableScrollPhysics(),
+            ),
+          )
         ],
       ),
     );
@@ -45,10 +51,12 @@ class _CatalogState extends State<Catalog> {
 }
 
 class Product extends StatelessWidget {
+  const Product({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -60,8 +68,8 @@ class Product extends StatelessWidget {
           Column(
             children: [
               Image.asset('assets/product.png'),
-              Text('asfsaf'),
-              Text('price'),
+              const Text('asfsaf'),
+              const Text('price'),
               OutlinedActionButton(label: '1220', onPressed: () {})
             ],
           )

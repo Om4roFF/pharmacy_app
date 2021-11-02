@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:melissa_pharm/ui/body_constructor.dart';
-import 'package:melissa_pharm/ui/widgets/buttons/action_button.dart';
-import 'package:melissa_pharm/ui/widgets/buttons/outlined_green_button.dart';
+import 'package:pharmacy_app/ui/widgets/buttons/outlined_green_button.dart';
+
+import '../../body_constructor.dart';
 
 class MyAddresses extends StatelessWidget {
+  const MyAddresses({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Body(
@@ -13,22 +15,20 @@ class MyAddresses extends StatelessWidget {
           ListTile(
             leading: Checkbox(
               value: false,
+              onChanged: (bool? value) {},
             ),
-            title: Text('Алматы'),
-            trailing: Icon(Icons.settings_applications_sharp),
+            title: const Text('Алматы'),
+            trailing: const Icon(Icons.settings_applications_sharp),
           ),
           ListTile(
             leading: Checkbox(
               value: false,
+              onChanged: (bool? value) {},
             ),
-            title: Text('Алматы'),
-            trailing: Icon(Icons.settings_applications_sharp),
+            title: const Text('Алматы'),
+            trailing: const Icon(Icons.settings_applications_sharp),
           ),
-          OutlinedActionButton(
-              label: 'Добавить адрес',
-              onPressed: (){
-
-          })
+          OutlinedActionButton(label: 'Добавить адрес', onPressed: () {})
         ],
       ),
     );

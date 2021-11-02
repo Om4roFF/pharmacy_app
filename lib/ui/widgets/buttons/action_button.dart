@@ -5,16 +5,16 @@ class ActionButton extends StatefulWidget {
   final String label;
   final double fontSize;
   final Function onPressed;
-  final IconData icon;
-  final backgroundColor;
-  final padding;
+  final IconData? icon;
+  final Color backgroundColor;
+  final EdgeInsets padding;
 
   const ActionButton(
-      {required Key key,
+      {Key? key,
       required this.label,
       required this.onPressed,
-      required this.icon,
-      this.backgroundColor,
+      this.icon,
+      this.backgroundColor = Colors.transparent,
       this.padding = const EdgeInsets.symmetric(vertical: 8.0),
       this.fontSize = 14})
       : super(key: key);
@@ -40,7 +40,7 @@ class _ActionButtonState extends State<ActionButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: widget.backgroundColor ?? Colors.white,
+      color: widget.backgroundColor,
       padding: widget.padding,
       child: GestureDetector(
         onTap: () async {
@@ -48,7 +48,7 @@ class _ActionButtonState extends State<ActionButton> {
             loading = true;
           });
           widget.onPressed();
-          await Future.delayed(Duration(seconds: 1));
+          await Future.delayed(const Duration(seconds: 1));
 
           setState(() {
             loading = false;
